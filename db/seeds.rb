@@ -5,24 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Space.destroy_all
 Booking.destroy_all
+Space.destroy_all
+User.destroy_all
 
 
-paul = User.create(email: 'paul@lewagon.com', encrypted_password: 'azerty')
-sylvain = User.create(email: 'sylvain@lewagon.com', encrypted_password: 'azerty')
-julien = User.create(email: 'julien@lewagon.com', encrypted_password: 'azerty')
-fred = User.create(email: 'fred@lewagon.com', encrypted_password: 'azerty')
-toto = User.create(email: 'toto@lewagon.com', encrypted_password: 'azerty')
+paul = User.create!(email: 'paul@lewagon.com', password: 'azerty')
+sylvain = User.create!(email: 'sylvain@lewagon.com', password: 'azerty')
+julien = User.create!(email: 'julien@lewagon.com', password: 'azerty')
+fred = User.create!(email: 'fred@lewagon.com', password: 'azerty')
+toto = User.create!(email: 'toto@lewagon.com', password: 'azerty')
 
-space1 = Space.create(owner_id: 1)
-space2 = Space.create(owner_id: 2)
+space1 = Space.create!(owner: paul)
+space2 = Space.create!(owner: sylvain)
 
 
-bookingA = Booking.create(mate_id: 4, space_id: 1)
-bookingB = Booking.create(mate_id: 5, space_id: 1)
-bookingC = Booking.create(mate_id: 3, space_id: 2)
+bookingA = Booking.create!(mate: julien, space: space1)
+bookingB = Booking.create!(mate: fred, space: space1)
+bookingC = Booking.create!(mate: toto, space: space2)
 
 
 
