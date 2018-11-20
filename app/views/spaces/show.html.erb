@@ -4,15 +4,13 @@
 <div class="owner">Owner email : <%= @owner.email %></div>
 <br>
 
-
-<div>
-  <%= simple_form_for [@space, @booking] do |f| %>
-  <%= f.input :mate_id, as: :hidden %>
-  <%= f.input :space_id, as: :hidden %>
-
-  <%= f.submit "add a booking", class: "btn btn-primary" %>
+<% if @space.available? %>
+  <h2> L'appartement est disponible</h2>
+  <%= render 'bookings/form' %>
+<% else %>
+  <h2>L'appartement n'est plus disponible</h2>
 <% end %>
-</div>
+
 <br>
 
 <p><%= link_to "Back to index", spaces_path %></p>

@@ -8,6 +8,8 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(params_booking)
     @booking.save
+    @space = @booking.space
+    change_availability
 
     redirect_to spaces_path
   end
@@ -22,7 +24,15 @@ class BookingsController < ApplicationController
   private
 
   def params_booking
-    params.require(:booking).permit(:mate_id, :space_id)
+    params.require(:booking).permit(:mate_id, :space_id, :available)
   end
 
+  def change_availability
+    if @space.available?
+      @space.update_attribute('available', false)
+    else
+      @space.update_attribute('available', true)
+    end
+  end
 end
+
