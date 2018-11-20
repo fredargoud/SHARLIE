@@ -2,6 +2,6 @@
 
 <ul>
   <%  @spaces.each do |space| %>
-    <li> <%= link_to space.id, space_path(space) %></li>
+    <li> <%= link_to space.title, space_path(space) %></li>
   <% end %>
 </ul>
