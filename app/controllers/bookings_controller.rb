@@ -6,8 +6,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(params[:booking])
+    @booking = Booking.new(params_booking)
     @booking.save
+
+    redirect_to spaces_path
   end
 
   def destroy
@@ -16,4 +18,11 @@ class BookingsController < ApplicationController
 
     redirect_to(root_path)
   end
+
+  private
+
+  def params_booking
+    params.require(:booking).permit(:mate_id, :space_id)
+  end
+
 end
