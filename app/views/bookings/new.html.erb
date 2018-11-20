@@ -1,0 +1,9 @@
+
+
+<%= simple_form_for [@booking] do |f| %>
+  <%= f.input :mate_id %>
+  <%= f.input :space_id %>
+
+  <%= f.submit "add a booking", class: "btn btn-primary" %>
+<% end %>
+

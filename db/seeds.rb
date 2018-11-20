@@ -20,6 +20,7 @@ phil = User.create!(email: 'phil@lewagon.com', password: 'azerty')
 quentin = User.create!(email: 'quentin@lewagon.com', password: 'azerty')
 christy = User.create!(email: 'christy@lewagon.com', password: 'azerty')
 
+
 space1 = Space.create!(owner: paul, title: 'Appartement de Paul', description: 'Appartment, Lyon 1')
 space2 = Space.create!(owner: sylvain, title: 'Appartement de Sylvain', description: 'Appartment, Lyon 2')
 space3 = Space.create!(owner: julien, title: 'Appartement de Julien', description: 'Appartment, Lyon 3')
