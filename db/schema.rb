@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_19_144754) do
+ActiveRecord::Schema.define(version: 2018_11_20_102847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 2018_11_19_144754) do
     t.integer "owner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+    t.integer "price"
+    t.integer "number_of_seats"
     t.index ["owner_id"], name: "index_spaces_on_owner_id"
   end
 
