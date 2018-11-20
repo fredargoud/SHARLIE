@@ -1,0 +1,8 @@
+<div>
+  <%= simple_form_for [@space, @booking] do |f| %>
+  <%= f.input :mate_id, as: :hidden %>
+  <%= f.input :space_id, as: :hidden %>
+
+  <%= f.submit "add a booking", class: "btn btn-primary" %>
+<% end %>
+</div>
