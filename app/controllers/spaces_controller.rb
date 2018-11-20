@@ -17,7 +17,13 @@ class SpacesController < ApplicationController
 
   def create
     @space = Space.new(space_params)
-    @space.save!
+    @space.owner = current_user
+    if @space.save
+      redirect_to spaces_path
+    else
+      ap @space.errors
+      render :new
+    end
   end
 
   def edit
@@ -26,7 +32,7 @@ class SpacesController < ApplicationController
   def update
   end
 
-  def detroy
+  def destroy
   end
 
   private
@@ -36,6 +42,6 @@ class SpacesController < ApplicationController
   end
 
   def space_params
-    params.require(:space).permit(:owner_id)
+    params.require(:space).permit(:title, :description)
   end
 end
