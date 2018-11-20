@@ -1,0 +1,7 @@
+<h1>These are your booking</h1>
+
+<%= @space.description %>
+
+<%= link_to "Delete my booking", booking_path(@booking),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
