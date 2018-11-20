@@ -3,4 +3,18 @@
 <div class="describe">Description : <%= @space.description %></div>
 <div class="owner">Owner email : <%= @owner.email %></div>
 <br>
+
+
+<div>
+  <%= simple_form_for [@space, @booking] do |f| %>
+  <%= f.input :mate_id, as: :hidden %>
+  <%= f.input :space_id, as: :hidden %>
+
+  <%= f.submit "add a booking", class: "btn btn-primary" %>
+<% end %>
+</div>
+<br>
+
 <p><%= link_to "Back to index", spaces_path %></p>
+
+

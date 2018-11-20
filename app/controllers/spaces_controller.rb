@@ -7,6 +7,8 @@ class SpacesController < ApplicationController
 
   def show
     @owner = @space.owner
+    @user  = current_user
+    @booking = Booking.new(mate: current_user, space: @space)
   end
 
   def new

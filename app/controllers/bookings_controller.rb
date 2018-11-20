@@ -1,23 +1,28 @@
 class BookingsController < ApplicationController
-  def index
-    @bookings = Booking.all
-  end
 
   def show
     @booking = Booking.find(params[:id])
-  end
-
-  def new
-    @booking = Booking.new
+    @space = @booking.space
   end
 
   def create
-    @booking = Booking.new(params[:booking])
+    @booking = Booking.new(params_booking)
     @booking.save
+
+    redirect_to spaces_path
   end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
+
+    redirect_to(root_path)
   end
+
+  private
+
+  def params_booking
+    params.require(:booking).permit(:mate_id, :space_id)
+  end
+
 end
