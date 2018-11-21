@@ -1,4 +1,9 @@
-<%= render "shared/banner" %>
+
+<% content_for :extra_header do %>
+  <%= render "shared/banner" %>
+<% end %>
+
+
 <h1><%= @space.title %></h1>
 <br>
 <div class="describe">Description : <%= @space.description %></div>

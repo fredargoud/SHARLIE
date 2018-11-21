@@ -1,17 +1,21 @@
 class BookingsController < ApplicationController
 
+
   def show
     @booking = Booking.find(params[:id])
     @space = @booking.space
   end
 
   def create
-    @booking = Booking.new(params_booking)
-    @booking.save
-    @space = @booking.space
-    change_availability
-
-    redirect_to spaces_path
+    if user_signed_in?
+      @booking = Booking.new(params_booking)
+      @booking.save
+      @space = @booking.space
+      change_availability
+      redirect_to spaces_path
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def destroy
@@ -35,4 +39,3 @@ class BookingsController < ApplicationController
     end
   end
 end
-
