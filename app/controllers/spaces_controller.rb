@@ -2,7 +2,7 @@ class SpacesController < ApplicationController
   before_action :set_spaces, only: [:show]
 
   def index
-    @spaces = Space.all
+    @spaces = Space.order(created_at: :desc)
   end
 
   def show
