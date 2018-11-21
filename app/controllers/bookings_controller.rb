@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
 
-
   def show
     @booking = Booking.find(params[:id])
     @space = @booking.space
@@ -20,9 +19,9 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
-    @booking.destroy
+    @booking.destroy if @booking.mate == current_user
 
-    redirect_to(root_path)
+    redirect_to profile_bookings_path
   end
 
   private
