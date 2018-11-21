@@ -1,4 +1,7 @@
-<div class="row">
+
+<div class="container">
+  <h1>My spaces</h1>
+  <div class="row">
 
     <%  @spaces.each do |space| %>
       <%= link_to space_path(space) do %>
@@ -14,10 +17,7 @@
     <% end %>
     <% end %>
     </div>
+
+    <%= link_to "Create a new space", new_space_path(@space), class: "btn btn-danger" %>
   </div>
-
-
-
-
-
-
+</div>
