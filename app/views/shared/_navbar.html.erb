@@ -3,14 +3,14 @@
     <div class="navbar-wagon">
       <!-- Logo -->
       <a href="/" class="navbar-wagon-brand">
-        <img src="images/logo.png" alt="logo">
+        <%= image_tag "logo_B.png", alt: "logo" %>
       </a>
 
       <!-- Right Navigation -->
       <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-        <%= link_to "My Space", new_space_path %>
-        <%= link_to "My Booking", profile_bookings_path %>
+        <%= link_to "My Spaces", profile_spaces_path, class:"links_navbar" %>
+        <%= link_to "My Bookings", profile_bookings_path, class:"links_navbar" %>
 
         <!-- Profile picture with dropdown list -->
         <div class="navbar-wagon-item">
@@ -42,15 +42,15 @@
   <div class="navbar-wagon">
     <!-- Logo -->
     <a href="/" class="navbar-wagon-brand">
-      <img src="images/logo.png" alt="logo">
+      <%= image_tag "logo_B.png", alt: "logo" %>
     </a>
 
     <!-- Right Navigation -->
     <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-      <a href="" class="navbar-wagon-item navbar-wagon-link">à propos</a>
-      <%= link_to "M'inscrire", new_user_registration_path %>
-      <%= link_to "Connexion", new_user_session_path, class: "btn btn-large btn-danger" %>
+      <%= link_to "À propos", new_user_registration_path, class:"links_navbar" %>
+      <%= link_to "M'inscrire", new_user_registration_path, class:"links_navbar" %>
+      <%= link_to "Connexion", new_user_session_path, class: "btn btn-large btn-nav btn-danger" %>
      </div>
     <!-- Dropdown appearing on mobile only -->
     <div class="navbar-wagon-item hidden-md hidden-lg">
