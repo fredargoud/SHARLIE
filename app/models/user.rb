@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_one :space
-  has_one :booking
+  has_many :spaces
+  has_many :bookings, foreign_key: :mate_id
 end
