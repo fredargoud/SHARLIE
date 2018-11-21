@@ -7,7 +7,9 @@
     <%= f.input :description %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions">
+  <%= link_to profile_spaces_path(@space) do %>
+      <%= f.button :submit %>
+  <% end %>
+    </div>
 <% end %>
