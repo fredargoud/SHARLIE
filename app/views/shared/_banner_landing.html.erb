@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+<% else %>
 <div class="banner-landing" style="background-image: url('http://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_1500,w_2000,f_auto,q_auto/v1/1441878/saloon_HD_rv7ekk.jpg');">
   <div class="banner-content">
     <h1>Quand le coworking s'invite chez toi !</h1>
@@ -6,3 +8,4 @@ Préinscris-toi maintenant et rejoins la communauté</p>
     <a class="btn btn-danger btn-lg">Je m'inscris</a>
   </div>
 </div>
+<% end %>
