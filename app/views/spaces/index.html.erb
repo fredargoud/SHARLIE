@@ -1,23 +1,53 @@
+<h1>Tous les espaces</h1>
 <div class="row">
-  <div class="col-xs-12 col-md-8">
 
-    <div class="row">
-      <% @spaces.each do |space| %>
-        <%= link_to space_path(space) do %>
-            <div class="col-xs-12 col-sm-6 col-md-6">
-              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/1600x900/?desk');">
-                <div class="card-description">
-                  <h2><%= space.title %></h2>
-                  <p><%= space.owner.email %></p>
-                </div>
-                <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+  <div class="col-xs-12 col-sm-8">
+    <%  @spaces.each do |space| %>
+      <%= link_to space_path(space) do %>
+
+      <div class="col-xs-12 col-sm-6 card_margin">
+
+        <div class="card-space">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= space.image %>');">
+            <% if space.available? %>
+            <div class="space-available"><i class="fas fa-dot-circle"></i></div>
+            <% else %>
+            <div class="space-not-available"><i class="fas fa-dot-circle"></i></div>
+            <% end %>
+            <div class="card-description">
+              <h2><%= space.title %></h2>
+            </div>
+          </div>
+          <div class="foot_card">
+
+            <div class="rating">
+              <div class="star-container">
+                <input type="radio" name="starred" id="five"/>
+                <input type="radio" name="starred" id="four"/>
+                <input type="radio" name="starred" id="three"/>
+                <input type="radio" name="starred" id="two"/>
+                <input type="radio" name="starred" id="one"/>
+                <label for="one"></label>
+                <label for="two"></label>
+                <label for="three"></label>
+                <label for="four"></label>
+                <label for="five"></label>
               </div>
             </div>
-        <% end %>
-      <% end %>
-    </div>
+            <div class="name_user_card">Chez <%= space.owner.first_name %></div>
+            <%= image_tag space.owner.image, alt: "user_img", class: "card-user" %>
 
+          </div>
+        </div>
+
+      </div>
+
+      <% end %>
+    <% end %>
   </div>
+
+
+
   <div class="col-xs-12 col-md-4">
     <div
     id="map"
@@ -25,6 +55,11 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
+
+
+
+
+
 </div>
 
 

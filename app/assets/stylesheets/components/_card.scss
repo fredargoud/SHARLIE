@@ -8,11 +8,13 @@
   background-position: center;
   color: white;
   position: relative;
+  border-radius: 5px 5px 0 0;
 }
 .card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  // position: absolute;
+  // right: 25px;
+  // bottom: 10px;
+  margin-right: 10px;
   width: 40px;
   border-radius: 50%;
 }
@@ -52,5 +54,45 @@
 
 .card_margin{
   margin: 15px 0;
+}
 
+.foot_card {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 60px;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  color: rgb(3, 62, 137);;
+}
+
+.name_user_card {
+  margin-right: 10px;
+  // color: white;
+
+}
+
+.card-space {
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #E7E5E5;
+}
+
+.rating {
+  width: 100px;
+  margin-right: auto;
+}
+
+
+.space-available {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #00C83C;
+}
+
+.space-not-available {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #E95254;
 }
