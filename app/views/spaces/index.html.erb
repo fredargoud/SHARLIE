@@ -2,61 +2,62 @@
   <%= render "shared/banner_landing" %>
 <% end %>
 
-<div class="row main-container">
+<div class="row">
+  <div class="main-container">
+    <div class="col-xs-12 col-md-8">
 
-  <div class="col-xs-12 col-sm-8">
-    <h1 class="padding-left">Tous les espaces</h1>
-    <%  @spaces.each do |space| %>
-      <%= link_to space_path(space) do %>
+      <h1 class="padding-left">Tous les espaces</h1>
+      <%  @spaces.each do |space| %>
+        <%= link_to space_path(space) do %>
 
-      <div class="col-xs-12 col-sm-4 card_margin">
+        <div class="col-xs-12 col-sm-4 card_margin">
 
-        <div class="card-space">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= space.image %>');">
-            <% if space.available? %>
-            <div class="space-available"><i class="fas fa-dot-circle"></i></div>
-            <% else %>
-            <div class="space-not-available"><i class="fas fa-dot-circle"></i></div>
-            <% end %>
-            <div class="card-description">
-              <h2><%= space.title %></h2>
-            </div>
-          </div>
-          <div class="foot_card">
-
-            <div class="rating">
-              <div class="star-container">
-                <input type="radio" name="starred" id="five"/>
-                <input type="radio" name="starred" id="four"/>
-                <input type="radio" name="starred" id="three"/>
-                <input type="radio" name="starred" id="two"/>
-                <input type="radio" name="starred" id="one"/>
-                <label for="one"></label>
-                <label for="two"></label>
-                <label for="three"></label>
-                <label for="four"></label>
-                <label for="five"></label>
+          <div class="card-space">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= space.image %>');">
+              <% if space.available? %>
+              <div class="space-available"><i class="fas fa-dot-circle"></i></div>
+              <% else %>
+              <div class="space-not-available"><i class="fas fa-dot-circle"></i></div>
+              <% end %>
+              <div class="card-description">
+                <h2><%= space.title %></h2>
               </div>
             </div>
-            <div class="name_user_card">Chez <%= space.owner.first_name %></div>
-            <%= image_tag space.owner.image, alt: "user_img", class: "card-user" %>
+            <div class="foot_card">
 
+              <div class="card-rating">
+                 <div class="jaune">
+                     <% space.ranking.times do %>
+                       <%= link_to icon('fa', 'star'), "#", style:"color: #F9C72E;" %>
+                     <% end %>
+                   </div>
+                   <div class="grey">
+                     <% (5-space.ranking).times do %>
+                       <%= link_to icon('fa', 'star'), "#", style:"color: #CCCCCC;" %>
+                     <% end %>
+                  </div>
+
+              </div>
+              <div class="name_user_card">Chez <%= space.owner.first_name %></div>
+              <%= image_tag space.owner.image, alt: "user_img", class: "card-user" %>
+
+            </div>
           </div>
+
         </div>
 
-      </div>
-
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
 
 
 
-  <div class="col-xs-12 col-md-4">
-    <div
-    id="map"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="col-xs-12 col-md-4">
+      <div
+      id="map"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
   </div>
 
