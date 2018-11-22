@@ -1,31 +1,31 @@
+<div class="container">
+  <% content_for :extra_header do %>
+    <%= render "shared/banner" %>
+  <% end %>
 
-<% content_for :extra_header do %>
-  <%= render "shared/banner" %>
-<% end %>
 
+  <h1><%= @space.title %></h1>
 
-<h1><%= @space.title %></h1>
+  <div class="flexbox">
 
-<div class="flexbox">
+    <div class="owner-profile">
+      <div class="describe">Description : <%= @space.description %></div>
+      <div class="owner">Owner email : <%= @owner.email %></div>
+    </div>
 
-  <div class="owner-profile">
-    <div class="describe">Description : <%= @space.description %></div>
-    <div class="owner">Owner email : <%= @owner.email %></div>
+    <div class="book-space">
+      <% if @space.available? %>
+        <p> L'appartement est disponible</p>
+        <%= render 'bookings/form' %>
+      <% else %>
+        <h2>L'appartement n'est plus disponible</h2>
+      <% end %>
+
+    </div>
   </div>
 
-  <div class="book-space">
-    <% if @space.available? %>
-      <p> L'appartement est disponible</p>
-      <%= render 'bookings/form' %>
-    <% else %>
-      <h2>L'appartement n'est plus disponible</h2>
-    <% end %>
+  <p><%= link_to "Retour aux espaces", spaces_path %></p>
 
-  </div>
 </div>
-
-
-
-<p><%= link_to "Retour aux espaces", spaces_path %></p>
 
 
