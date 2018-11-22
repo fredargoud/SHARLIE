@@ -1,5 +1,67 @@
-.flexbox {
+.card-user-show {
+  border-radius: 50%;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.flex_box {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: left;
+  height: 200px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+
+.book-card {
+  background-color: white;
+  text-align: center;
+  padding: 50px 10px;
+  border-radius: 4px;
+}
+
+.text-center {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.row {
+  margin-bottom: 50px;
+}
+
+.row h1 {
+  margin-bottom: 50px;
+  font-size: 38px;
+}
+
+.renseignement {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.image {
+  width: 100px;
+}
+
+.owner-name {
+  margin-left: 13px;
+}
+
+.flex_box_equipement {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.owner_description {
+  height: 182px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
+.owner_description h2 {
+  margin-bottom: 20px;
+}
+
+.description {
+  height: 182px;
+  width: 700px;
+  margin-top: 40px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
 }

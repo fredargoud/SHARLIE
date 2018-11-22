@@ -3,30 +3,52 @@
     <%= render "shared/banner" %>
   <% end %>
 
-
+<div class="row">
   <h1><%= @space.title %></h1>
 
-  <div class="flexbox">
-
-    <div class="owner-profile">
-      <div class="describe">Description : <%= @space.description %></div>
-      <div class="owner">Owner email : <%= @owner.email %></div>
+  <div class="col-xs-12 col-sm-7 flex_box">
+    <div class="image">
+      <%= image_tag @space.owner.image, alt: "user_img", class: "card-user-show" %>
+      <p class="owner-name"><%= @owner.first_name %></p>
     </div>
+    <div class="space_description">
+      <p class="renseignement">Renseignement sur votre hôte :</p>
+      <p class="describe">Description : <%= @space.description %></p>
+      <p class="owner">Email : <%= @owner.email %></p>
+    </div>
+  </div>
 
-    <div class="book-space">
-      <% if @space.available? %>
-        <p> L'appartement est disponible</p>
-        <%= render 'bookings/form' %>
-      <% else %>
-        <h2>L'appartement n'est plus disponible</h2>
-      <% end %>
-
+  <div class="col-xs-12 col-md-5 book-card">
+    <% if @space.available? %>
+      <p class="text-center"> L'appartement est disponible</p>
+      <%= render 'bookings/form' %>
+    <% else %>
+      <p class="text-center">Cet appartement n'est plus disponible</p>
+      <%= link_to "Retour aux espaces", spaces_path, class: "btn btn-large btn-nav btn-danger" %>
+    <% end %>
 
     </div>
   </div>
 
-  <p><%= link_to "Retour aux espaces", spaces_path %></p>
+<div class="owner_description">
+  <h2 class="renseignement">Équipement :</h2>
+  <div class="flex_box_equipement">
+    <div>
+      <p><i class="fas fa-snowflake"></i> Climatisation</p>
+      <p><i class="fas fa-wifi"></i> Wi-Fi</p>
+    </div>
+    <div>
+      <p><i class="fas fa-sun"></i> Chauffage</p>
+      <p><i class="fas fa-bath"></i> Équipements de base</p>
+    </div>
+  </div>
+</div>
 
+<div class="owner_description">
+  <div class="description">
+    Bienvenue dans notre "creuset lyonnais". A l'origine, un creuset est un pot en métal servant à la fusion d'autres métaux
+De nos jours, il évoque dans des expressions imagées, des lieux où ont été brassés différents groupes de personnes.
+  </div>
 </div>
 
 
