@@ -73,3 +73,23 @@
     border-radius: 20px;
     box-shadow: 1px 1px 3px #E7E5E5;
 }
+
+.rating {
+  width: 100px;
+  margin-right: auto;
+}
+
+
+.space-available {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #00C83C;
+}
+
+.space-not-available {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #E95254;
+}

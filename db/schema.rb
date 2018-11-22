@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-addImageToSpaces
 ActiveRecord::Schema.define(version: 2018_11_22_101717) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"

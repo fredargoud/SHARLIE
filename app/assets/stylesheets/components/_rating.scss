@@ -1,0 +1,37 @@
+.star-container {
+  text-align: center;
+  font-size: 0;
+  label {
+    display: inline-block;
+    cursor: pointer;
+    &:after {
+      content: "\2605";
+      font-size: 15px;
+      color: #999;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    }
+    &:hover:after { color: #F89406; }
+  }
+  input { display: none; }
+  #one:checked ~ label[for=one]:after,
+  #two:checked ~ label[for=two]:after,
+  #three:checked ~ label[for=three]:after,
+  #four:checked ~ label[for=four]:after,
+  #five:checked ~ label[for=five]:after, { color: #F89406; }
+  #two:checked ~ label[for=one]:after { color: #F89406; }
+  #three:checked {
+    & ~ label[for=one]:after,
+    & ~ label[for=two]:after { color: #F89406; }
+  }
+  #four:checked {
+    & ~ label[for=one]:after,
+    & ~ label[for=two]:after,
+    & ~ label[for=three]:after { color: #F89406; }
+  }
+  #five:checked {
+    & ~ label[for=one]:after,
+    & ~ label[for=two]:after,
+    & ~ label[for=three]:after,
+    & ~ label[for=four]:after { color: #F89406; }
+  }
+}
