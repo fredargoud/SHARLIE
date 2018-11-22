@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_093840) do
+ActiveRecord::Schema.define(version: 2018_11_22_101717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_093840) do
     t.integer "number_of_seats"
     t.string "title"
     t.boolean "available", default: true
+    t.string "image"
     t.index ["owner_id"], name: "index_spaces_on_owner_id"
   end
 
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_093840) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
