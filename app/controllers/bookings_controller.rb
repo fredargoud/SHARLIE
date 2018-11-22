@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
       @booking.save
       @space = @booking.space
       change_availability
-      redirect_to spaces_path
+      # redirect_to spaces_path
     else
       redirect_to new_user_session_path
     end

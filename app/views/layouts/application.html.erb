@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <img src="../images/icon-beshare-BP.png" alt="">
+    <title>Sharlie</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_pack_tag "map" %>
@@ -15,10 +16,8 @@
     <%= render "shared/navbar" %>
     <%= yield :extra_banner %>
     <%= yield :extra_header %>
-    <div class="container">
-      <%= yield %>
-      <%= javascript_include_tag 'application' %>
-      <%= javascript_pack_tag 'application' %>
-    </div>
+    <%= yield %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>

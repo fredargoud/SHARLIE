@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2018_11_22_111158) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+
     t.index ["owner_id"], name: "index_spaces_on_owner_id"
   end
 

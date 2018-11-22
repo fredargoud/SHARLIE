@@ -1,9 +1,7 @@
-
-<% content_for :extra_header do %>
-  <%= render "shared/banner" %>
-<% end %>
-
-
+<div class="container">
+  <% content_for :extra_header do %>
+    <%= render "shared/banner" %>
+  <% end %>
 
 <div class="row">
   <h1><%= @space.title %></h1>
@@ -29,9 +27,8 @@
       <%= link_to "Retour aux espaces", spaces_path, class: "btn btn-large btn-nav btn-danger" %>
     <% end %>
 
+    </div>
   </div>
-</div>
-
 
 <div class="owner_description">
   <h2 class="renseignement">Équipement :</h2>
