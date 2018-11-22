@@ -3,6 +3,16 @@ class SpacesController < ApplicationController
 
   def index
     @spaces = Space.order(created_at: :desc)
+
+    @spaces = Space.where.not(latitude: nil, longitude: nil)
+
+    @markers = @spaces.map do |space|
+      {
+        lng: space.longitude,
+        lat: space.latitude,
+        infoWindow: { content: render_to_string(partial: "../views/spaces/popup", locals: { space: space }) }
+      }
+    end
   end
 
   def show
