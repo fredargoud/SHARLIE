@@ -1,0 +1,21 @@
+<div class="container">
+  <% content_for :extra_header do %>
+    <%= render "shared/banner" %>
+  <% end %>
+
+
+  <h1><%= @space.title %></h1>
+
+  <div class="flexbox">
+
+    <div class="owner-profile">
+      <div class="describe">Description : <%= @space.description %></div>
+      <div class="owner">Owner email : <%= @space.owner.email %></div>
+    </div>
+  </div>
+
+  <p><%= link_to "Delete", profile_space_path(@space), method: :delete %></p>
+
+  <p><%= link_to "Retour sur mes espaces", profile_spaces_path %></p>
+
+</div>

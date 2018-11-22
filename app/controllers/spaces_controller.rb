@@ -29,7 +29,7 @@ class SpacesController < ApplicationController
     @space = Space.new(space_params)
     @space.owner = current_user
     if @space.save
-      redirect_to spaces_path
+      redirect_to profile_spaces_path
     else
       ap @space.errors
       render :new
@@ -43,6 +43,10 @@ class SpacesController < ApplicationController
   end
 
   def destroy
+    @space = Space.find(params[:id])
+    @space.destroy
+
+    redirect_to profile_spaces_path
   end
 
   private

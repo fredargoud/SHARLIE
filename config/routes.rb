@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :profile do
-    resources :spaces, only: [:index]
+    resources :spaces, only: [:index, :destroy, :show]
   end
 
   resources :spaces do

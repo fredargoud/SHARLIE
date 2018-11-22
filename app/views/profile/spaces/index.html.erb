@@ -5,7 +5,7 @@
 
     <div class="col-xs-12 col-sm-8">
       <%  @spaces.each do |space| %>
-        <%= link_to space_path(space) do %>
+        <%= link_to profile_space_path(space) do %>
 
         <div class="col-xs-12 col-sm-6 card_margin">
 
@@ -47,6 +47,8 @@
         <% end %>
       <% end %>
     </div>
+
+
 
     <%= link_to "Create a new space", new_space_path(@space), class: "btn btn-danger" %>
   </div>
