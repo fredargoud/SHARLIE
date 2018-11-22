@@ -1,11 +1,15 @@
-<h1>Tous les espaces</h1>
-<div class="row">
+<% content_for :extra_banner do %>
+  <%= render "shared/banner_landing" %>
+<% end %>
+
+<div class="row main-container">
 
   <div class="col-xs-12 col-sm-8">
+    <h1 class="padding-left">Tous les espaces</h1>
     <%  @spaces.each do |space| %>
       <%= link_to space_path(space) do %>
 
-      <div class="col-xs-12 col-sm-6 card_margin">
+      <div class="col-xs-12 col-sm-4 card_margin">
 
         <div class="card-space">
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= space.image %>');">
@@ -56,11 +60,4 @@
     </div>
   </div>
 
-
-
-
-
 </div>
-
-
-
