@@ -10,15 +10,15 @@ Space.destroy_all
 User.destroy_all
 
 
-paul = User.create!(email: 'paul@lewagon.com', password: 'azerty')
-sylvain = User.create!(email: 'sylvain@lewagon.com', password: 'azerty')
-julien = User.create!(email: 'julien@lewagon.com', password: 'azerty')
-fred = User.create!(email: 'fred@lewagon.com', password: 'azerty')
-toto = User.create!(email: 'toto@lewagon.com', password: 'azerty')
-greg = User.create!(email: 'greg@lewagon.com', password: 'azerty')
-phil = User.create!(email: 'phil@lewagon.com', password: 'azerty')
-quentin = User.create!(email: 'quentin@lewagon.com', password: 'azerty')
-christy = User.create!(email: 'christy@lewagon.com', password: 'azerty')
+paul = User.create!(first_name: 'Paul', last_name: 'De Castelbajac', email: 'paul@lewagon.com', password: 'azerty', image: 'https://avatars0.githubusercontent.com/u/36788687?v=4')
+sylvain = User.create!(first_name: 'Sylvain', last_name: 'Tersoglio', email: 'sylvain@lewagon.com', password: 'azerty', image: 'https://avatars0.githubusercontent.com/u/43859719?v=4')
+julien = User.create!(first_name: 'Julien', last_name: 'Santucci', email: 'julien@lewagon.com', password: 'azerty', image: 'https://avatars2.githubusercontent.com/u/43654668?v=4')
+fred = User.create!(first_name: 'Fred', last_name: 'Argoud', email: 'fred@lewagon.com', password: 'azerty', image: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/e3tksw9dvab8zrixxlld.jpg')
+toto = User.create!(first_name: 'Toto', last_name: 'Tata', email: 'toto@lewagon.com', password: 'azerty', image: 'https://avatars0.githubusercontent.com/u/43747777?v=4')
+greg = User.create!(first_name: 'Greg', last_name: 'Dief', email: 'greg@lewagon.com', password: 'azerty', image: 'https://avatars3.githubusercontent.com/u/43754546?v=4')
+phil = User.create!(first_name: 'Phil', last_name: 'Morfin', email: 'phil@lewagon.com', password: 'azerty', image: 'https://avatars0.githubusercontent.com/u/16327734?v=4')
+quentin = User.create!(first_name: 'Quentin', last_name: 'Riviere', email: 'quentin@lewagon.com', password: 'azerty', image: 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/oo2v1bw5swff4snvrhdb.jpg')
+christy = User.create!(first_name: 'Christy', last_name: 'Valette', email: 'christy@lewagon.com', password: 'azerty', image: 'https://avatars2.githubusercontent.com/u/22522493?v=4')
 
 
 space1 = Space.create!(owner: paul, title: 'Appartement de Paul', description: 'Appartment, Lyon 1')
