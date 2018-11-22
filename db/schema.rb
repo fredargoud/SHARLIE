@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_101717) do
+ActiveRecord::Schema.define(version: 2018_11_22_111158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 2018_11_22_101717) do
     t.string "title"
     t.boolean "available", default: true
     t.string "image"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
+    t.integer "ranking"
     t.index ["owner_id"], name: "index_spaces_on_owner_id"
   end
 
