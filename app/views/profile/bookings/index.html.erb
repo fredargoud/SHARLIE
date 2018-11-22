@@ -1,0 +1,8 @@
+
+
+<% @bookings.each do |booking| %>
+  <%= booking.space.title %>
+  <%= link_to "Delete",
+  booking_path(booking),
+  method: :delete %>
+<% end %>

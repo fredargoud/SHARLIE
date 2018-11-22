@@ -1,29 +1,23 @@
-<div class="row">
+
+<div class="container">
+  <h1>My spaces</h1>
+  <div class="row">
 
     <%  @spaces.each do |space| %>
       <%= link_to space_path(space) do %>
-
       <div class="col-xs-12 col-sm-4 card_margin">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/1600x900/?desk');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
         <div class="card-description">
-
           <h2><%= space.title %></h2>
-
           <p><%= space.owner.email %></p>
-
         </div>
-
         <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-
       </div>
     </div>
     <% end %>
     <% end %>
     </div>
+
+    <%= link_to "Create a new space", new_space_path(@space), class: "btn btn-danger" %>
   </div>
-
-
-
-
-
-
+</div>
