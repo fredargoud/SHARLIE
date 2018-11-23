@@ -1,6 +1,7 @@
 class Profile::BookingsController < ApplicationController
   def index
-    @bookings = current_user.bookings
+    @bookings      = current_user.bookings
+
   end
 
 
@@ -10,5 +11,3 @@ class Profile::BookingsController < ApplicationController
 
 end
 
-
-# Quel controlleur utiliser pour destroy?
