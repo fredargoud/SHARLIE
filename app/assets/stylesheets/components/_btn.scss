@@ -1,0 +1,37 @@
+.btn-primary {
+  background-color: #033E89 !important;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px 50px;
+  color: white;
+}
+
+.btn-nav {
+  margin-left: 20px;
+  background-color: white !important;
+  border: 0;
+  border-radius: 5px;
+  color: #033E89;
+}
+
+.btn-warning {
+  background-color: #033E89 !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 50px;
+  color: white;
+}
+
+.btn-warning:hover {
+    background-color: rgba(3, 62, 137, 0.9) !important;
+    color: white;
+}
+
+
+.btn-danger {
+  background-color: rgba(3, 62, 137, 0.7) !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 50px;
+  color: white;
+}

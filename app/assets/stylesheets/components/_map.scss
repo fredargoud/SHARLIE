@@ -7,9 +7,17 @@
 
 .mapboxgl-popup {
   max-width: 200px;
+  border-radius: 8px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  display: flex;
+  justify-content: space-around;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  box-shadow: 0px 2px 1px grey;
+  list-style-type: none;
+  border: solid 1px grey;
 }

@@ -1,67 +1,91 @@
-.card-user-show {
-  border-radius: 50%;
-  height: 60px;
-  margin-bottom: 10px;
-}
+.spaces-show {
+  .card-user-show {
+    border-radius: 50%;
+    height: 60px;
+    margin-bottom: 10px;
+  }
 
-.flex_box {
-  display: flex;
-  justify-content: left;
-  height: 200px;
-  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
-}
+  .flex_box {
+    display: flex;
+    justify-content: left;
+    height: 200px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+  }
 
-.book-card {
-  background-color: white;
-  text-align: center;
-  padding: 50px 10px;
-  border-radius: 4px;
-}
+  .book-card-col {
+    position: sticky !important;
+    top: 0 !important;
+    padding-right: 0;
+  }
 
-.text-center {
-  display: inline-block;
-  margin-bottom: 25px;
-}
+  .book-card {
+    background-color: rgba(255, 215, 0, 0.9 );
+    text-align: center;
+    border-radius: 0 0 0 5px;
+    padding: 50px 20px;
+  }
 
-.row {
-  margin-bottom: 50px;
-}
 
-.row h1 {
-  margin-bottom: 50px;
-  font-size: 38px;
-}
 
-.renseignement {
-  font-size: 18px;
-  font-weight: bold;
-}
+  .text-center {
+    display: inline-block;
+    margin-bottom: 25px;
+  }
 
-.image {
-  width: 100px;
-}
+  .row {
+    margin-bottom: 50px;
+  }
 
-.owner-name {
-  margin-left: 13px;
-}
+  .row h1 {
+    margin-bottom: 10px;
+    font-size: 38px;
+  }
 
-.flex_box_equipement {
-  width: 400px;
-  display: flex;
-  justify-content: space-between;
-}
+  .show-rating{
+    margin-bottom: 50px;
+    .card-rating{
+      left: 15px;
+    }
+    i{
+    font-size: 20px !important;
+    }
+  }
 
-.owner_description {
-  height: 182px;
-  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
-}
-.owner_description h2 {
-  margin-bottom: 20px;
-}
+  .renseignement {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
-.description {
-  height: 182px;
-  width: 700px;
-  margin-top: 40px;
-  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+  .image {
+    display: flex;
+    align-items: center;
+  }
+
+  .owner-name {
+    margin-left: 13px;
+  }
+
+  .flex_box_equipement {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .owner_description {
+    border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+    width: 95%;
+  }
+  .owner_description h2 {
+    margin-bottom: 20px;
+  }
+
+  .description {
+    width: 95%;
+    margin-top: 40px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+  }
+
+  .wrapper-reviews{
+    width: 95%;
+  }
 }

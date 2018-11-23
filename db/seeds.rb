@@ -167,7 +167,7 @@ url = 'https://images.unsplash.com/photo-1496664444929-8c75efb9546f?ixlib=rb-0.3
 space13.remote_image_url = url
 space13.save!
 
-# Exemple d uploqd de photos
+
 
 puts "Create Booking"
 

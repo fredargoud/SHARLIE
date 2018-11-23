@@ -1,13 +1,23 @@
 
 <div class="container">
-  <h1>My spaces</h1>
+
+
+  <div>
+    <div class="col-xs-12 col-sm-9">
+      <h1>Mes Co'Works</h1>
+    </div>
+    <div class="col-xs-12 col-sm-3 create_btn">
+      <%= link_to "Créer un Co'Work", new_space_path(@space), class: "btn btn-danger" %>
+    </div>
+  </div>
+
   <div class="row">
 
-    <div class="col-xs-12 col-sm-8">
+    <div class="col-xs-12 col-sm-12">
       <%  @spaces.each do |space| %>
         <%= link_to profile_space_path(space) do %>
 
-        <div class="col-xs-12 col-sm-6 card_margin">
+        <div class="col-xs-12 col-sm-4 card_margin">
 
           <div class="card-space">
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= space.image %>');">
@@ -23,17 +33,18 @@
             <div class="foot_card">
 
               <div class="rating">
-                <div class="star-container">
-                  <input type="radio" name="starred" id="five"/>
-                  <input type="radio" name="starred" id="four"/>
-                  <input type="radio" name="starred" id="three"/>
-                  <input type="radio" name="starred" id="two"/>
-                  <input type="radio" name="starred" id="one"/>
-                  <label for="one"></label>
-                  <label for="two"></label>
-                  <label for="three"></label>
-                  <label for="four"></label>
-                  <label for="five"></label>
+                <div class="card-rating">
+                   <div class="jaune">
+                       <% space.ranking.times do %>
+                         <%= link_to icon('fa', 'star'), "#", style:"color: #F9C72E;" %>
+                       <% end %>
+                     </div>
+                     <div class="grey">
+                       <% (5-space.ranking).times do %>
+                         <%= link_to icon('fa', 'star'), "#", style:"color: #CCCCCC;" %>
+                       <% end %>
+                    </div>
+
                 </div>
               </div>
               <div class="name_user_card">Chez <%= space.owner.first_name %></div>
@@ -50,6 +61,5 @@
 
 
 
-    <%= link_to "Create a new space", new_space_path(@space), class: "btn btn-danger" %>
   </div>
 </div>

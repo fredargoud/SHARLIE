@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <img src="../images/icon-beshare-BP.png" alt="">
     <title>Sharlie</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -12,7 +11,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
 
-  <body>
+  <body class="<%= body_class %>">
     <%= render "shared/navbar" %>
     <%= yield :extra_banner %>
     <%= yield :extra_header %>
