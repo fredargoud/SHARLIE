@@ -32,21 +32,7 @@
             </div>
             <div class="foot_card">
 
-              <div class="rating">
-                <div class="card-rating">
-                   <div class="jaune">
-                       <% space.ranking.times do %>
-                         <%= link_to icon('fa', 'star'), "#", style:"color: #F9C72E;" %>
-                       <% end %>
-                     </div>
-                     <div class="grey">
-                       <% (5-space.ranking).times do %>
-                         <%= link_to icon('fa', 'star'), "#", style:"color: #CCCCCC;" %>
-                       <% end %>
-                    </div>
 
-                </div>
-              </div>
               <div class="name_user_card">Chez <%= space.owner.first_name %></div>
               <%= image_tag space.owner.image, alt: "user_img", class: "card-user" %>
 

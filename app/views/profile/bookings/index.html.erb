@@ -17,7 +17,7 @@
                 </div>
                 </div>
                 <div>
-                  <p id="description-1">Co'work chez <%= booking.space.owner.first_name %> # <%= booking.space.price %> €/jour</p>
+                  <p id="description-1">Co'work chez <%= booking.space.owner.first_name %>  <%= booking.space.price %> €/jour</p>
 
                 <%= link_to "Supprimer ma réservation",
                 booking_path(booking),
