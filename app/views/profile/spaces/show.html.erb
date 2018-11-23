@@ -14,8 +14,14 @@
     </div>
   </div>
 
-  <p><%= link_to "Delete", profile_space_path(@space), method: :delete %></p>
+  <br>
+  <br>
+  <br>
 
-  <p><%= link_to "Retour sur mes espaces", profile_spaces_path %></p>
+
+  <span><%= link_to 'Modifier', edit_profile_space_path, class: "btn btn-danger" %></span>
+
+  <span><%= link_to "Supprimer", profile_space_path(@space), method: :delete, class: "btn btn-danger" %></span>
+  <span><%= link_to "Retour sur mes espaces", profile_spaces_path, class: "btn btn-danger" %></span>
 
 </div>

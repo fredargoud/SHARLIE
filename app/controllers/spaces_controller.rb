@@ -40,6 +40,10 @@ class SpacesController < ApplicationController
   end
 
   def update
+    @space = Space.find(params[:id])
+    @space.update(space_params)
+    @space.save
+    redirect_to profile_space_path
   end
 
   def destroy
