@@ -130,7 +130,7 @@ space10 = Space.create!(
   description: 'Appartment, Lyon 8',
   ranking: 1,
 )
-url = 'https://images.unsplash.com/photo-1496664444929-8c75efb9546f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3a5e87267175e106954c7e76bd968b9&auto=format&fit=crop&w=600&q=60'
+url = 'https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3c8c144e8e71f0226b0f87f157ba468a&auto=format&fit=crop&w=1051&q=80'
 space10.remote_image_url = url
 space10.save!
 
@@ -141,7 +141,7 @@ space11 = Space.create!(
   description: 'Entre la place des Terreaux et le Vieux Lyon, un appartement sous les toits ambiance duplex idéalement situé au pied des pentes de la Croix Rousse. Rue très calme, belle vue dégagée sur la colline de Fourvière.',
   ranking: 1,
 )
-url = 'https://images.unsplash.com/photo-1496664444929-8c75efb9546f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3a5e87267175e106954c7e76bd968b9&auto=format&fit=crop&w=600&q=60'
+url = 'https://images.unsplash.com/photo-1526308182272-d2fe5e5947d8?ixlib=rb-0.3.5&s=d7f5cc38d669ecdf64e515ec87d722f2&auto=format&fit=crop&w=1050&q=80'
 space11.remote_image_url = url
 space11.save!
 
@@ -152,7 +152,7 @@ space12 = Space.create!(
   description: 'LYON 3 - Studio de 30m² avec mezzanine, entièrement rénové et équipé avec une place de parking privée à intérieur de la copropriété. Idéalement placé, proche de la part dieu (1 arrêt de tramway), et proche de tous commerces, ( Super U, boulangerie, tabac, Centre commercial La Part Dieu...).',
   ranking: 1,
 )
-url = 'https://images.unsplash.com/photo-1496664444929-8c75efb9546f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3a5e87267175e106954c7e76bd968b9&auto=format&fit=crop&w=600&q=60'
+url = 'https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c28abca5496f663d907e0306008213f7&auto=format&fit=crop&w=500&q=60'
 space12.remote_image_url = url
 space12.save!
 
@@ -163,7 +163,7 @@ space13 = Space.create!(
   description: 'Rénovation aout 2017, loft charmant dans la partie historique de Lyon Escaliers atypique datant du 18e siècle sur la presqu\'île, entre berges du Rhône et de la Saône ( belles promenades à faire !) au coeur de la fête des lumières ! Vous emprunterez un escalier en pierres du 18éme siècle.',
   ranking: 1,
 )
-url = 'https://images.unsplash.com/photo-1496664444929-8c75efb9546f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3a5e87267175e106954c7e76bd968b9&auto=format&fit=crop&w=600&q=60'
+url = 'https://images.unsplash.com/photo-1522444501378-94cddd292428?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6f4a2ff811f6fa90f949a32614d9bc0b&auto=format&fit=crop&w=1050&q=80'
 space13.remote_image_url = url
 space13.save!
 
