@@ -11,12 +11,20 @@ class Profile::SpacesController < ApplicationController
     @space = Space.find(params[:id])
   end
 
-
+  def edit
+    @space = Space.find(params[:id])
+  end
 
   def destroy
     @space = Space.find(params[:id])
     @space.destroy
 
     redirect_to profile_spaces_path
+  end
+
+  private
+
+  def space_params
+    params.require(:space).permit(:title, :description)
   end
 end

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   namespace :profile do
-    resources :spaces, only: [:index, :destroy, :show]
+    resources :spaces, only: [:index, :destroy, :show, :edit]
   end
 
   resources :spaces do
     resources :bookings, only: [:create, :index, :show]
+    resources :reviews, only: :create
   end
   devise_for :users
 

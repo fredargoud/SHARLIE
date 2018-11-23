@@ -19,6 +19,7 @@ class SpacesController < ApplicationController
     @owner = @space.owner
     @user  = current_user
     @booking = Booking.new(mate: current_user, space: @space)
+    @review = Review.new
   end
 
   def new
@@ -40,6 +41,10 @@ class SpacesController < ApplicationController
   end
 
   def update
+    @space = Space.find(params[:id])
+    @space.update(space_params)
+    @space.save
+    redirect_to profile_space_path
   end
 
   def destroy

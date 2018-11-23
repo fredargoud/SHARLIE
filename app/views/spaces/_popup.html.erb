@@ -1,2 +1,13 @@
-<h4><%= space.title %></h4>
-<li><%= space.description %></li>
+
+<ul style="list-style-type: none">
+  <li><strong>Prix : </strong><%= space.price %> €/jour</li>
+  <li><strong>Nom du lieu : </strong><%= space.title %></li>
+  <li><strong>Description : </strong><%= h truncate(space.description, :length => 80) %></li>
+</ul>
+
+<div style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= space.image %>');">
+</div>
+
+
+
+
