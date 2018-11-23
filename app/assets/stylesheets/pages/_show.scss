@@ -12,12 +12,20 @@
     border-bottom: 1px solid rgba(200, 200, 200, 0.4);
   }
 
-  .book-card {
-    background-color: white;
-    text-align: center;
-    padding: 50px 10px;
-    border-radius: 4px;
+  .book-card-col {
+    position: sticky !important;
+    top: 0 !important;
+    padding-right: 0;
   }
+
+  .book-card {
+    background-color: rgba(255, 215, 0, 0.9 );
+    text-align: center;
+    border-radius: 0 0 0 5px;
+    padding: 50px 20px;
+  }
+
+
 
   .text-center {
     display: inline-block;
@@ -29,8 +37,18 @@
   }
 
   .row h1 {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-size: 38px;
+  }
+
+  .show-rating{
+    margin-bottom: 50px;
+    .card-rating{
+      left: 15px;
+    }
+    i{
+    font-size: 20px !important;
+    }
   }
 
   .renseignement {
@@ -39,7 +57,8 @@
   }
 
   .image {
-    width: 100px;
+    display: flex;
+    align-items: center;
   }
 
   .owner-name {
@@ -53,17 +72,20 @@
   }
 
   .owner_description {
-    height: 182px;
     border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+    width: 95%;
   }
   .owner_description h2 {
     margin-bottom: 20px;
   }
 
   .description {
-    height: 182px;
-    width: 700px;
+    width: 95%;
     margin-top: 40px;
     border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+  }
+
+  .wrapper-reviews{
+    width: 95%;
   }
 }

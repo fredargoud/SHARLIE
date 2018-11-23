@@ -48,10 +48,17 @@ ActiveRecord::Schema.define(version: 2018_11_23_093953) do
     t.integer "number_of_seats"
     t.string "title"
     t.boolean "available", default: true
+<<<<<<< HEAD
+    t.string "image"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
+=======
     t.float "latitude"
     t.float "longitude"
     t.string "address"
     t.string "image"
+>>>>>>> master
     t.integer "ranking"
     t.index ["owner_id"], name: "index_spaces_on_owner_id"
   end
