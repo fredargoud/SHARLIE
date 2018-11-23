@@ -24,13 +24,6 @@ ActiveRecord::Schema.define(version: 2018_11_23_093953) do
     t.index ["space_id"], name: "index_bookings_on_space_id"
   end
 
-  create_table "chats", force: :cascade do |t|
-    t.text "message"
-    t.string "username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "reviews", force: :cascade do |t|
     t.text "content"
     t.bigint "space_id"
@@ -48,18 +41,11 @@ ActiveRecord::Schema.define(version: 2018_11_23_093953) do
     t.integer "number_of_seats"
     t.string "title"
     t.boolean "available", default: true
-<<<<<<< HEAD
     t.string "image"
-    t.float "latitude"
-    t.float "longitude"
-    t.string "address"
-=======
-    t.float "latitude"
-    t.float "longitude"
-    t.string "address"
-    t.string "image"
->>>>>>> master
     t.integer "ranking"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["owner_id"], name: "index_spaces_on_owner_id"
   end
 
