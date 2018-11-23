@@ -18,7 +18,7 @@ gem 'webpacker'
 gem 'devise'
 gem 'awesome_print'
 gem "geocoder"
-
+gem 'flutie'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

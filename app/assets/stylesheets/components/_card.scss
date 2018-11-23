@@ -58,7 +58,7 @@
 
 .foot_card {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
   height: 60px;
   background-color: white;
@@ -99,7 +99,7 @@
 
 .card-rating {
     display: flex;
-    font-size: 15px;
+    font-size: 10px;
     position: absolute;
     left: 25px;
 }
