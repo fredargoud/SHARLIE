@@ -5,11 +5,14 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :description %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+
   </div>
 
     <div class="form-actions">
   <%= link_to profile_spaces_path(@space) do %>
-      <%= f.button :submit %>
+      <%= f.button :submit, 'Créer un Co\'Work' %>
   <% end %>
     </div>
 <% end %>

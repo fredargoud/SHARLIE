@@ -34,6 +34,7 @@ class SpacesController < ApplicationController
     else
       ap @space.errors
       render :new
+      @space.save
     end
   end
 
@@ -61,6 +62,6 @@ class SpacesController < ApplicationController
   end
 
   def space_params
-    params.require(:space).permit(:title, :description)
+    params.require(:space).permit(:title, :description, :image)
   end
 end
