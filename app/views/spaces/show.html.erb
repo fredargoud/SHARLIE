@@ -57,10 +57,11 @@
 
   <div id="reviews">
     <% if @space.reviews.blank? %>
-      Be the first to leave a review for <%= @space.name %>
+      Be the first to leave a review for <%= @space.title %>
+      <%= render 'reviews/form', space: @space, review: @review %>
     <% else %>
       <% @space.reviews.each do |review| %>
-        <%= render 'reviews/show', review: review %>
+        <%= render 'reviews/form', space: @space, review: @review %>
       <% end %>
     <% end %>
   </div>
