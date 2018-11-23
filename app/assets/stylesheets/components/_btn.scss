@@ -1,12 +1,12 @@
 .btn-primary {
   background-color: #033E89 !important;
   border: 0;
-  border-radius: 50px;
+  border-radius: 5px;
   padding: 10px 50px;
   color: white;
 }
 
-.btn-nav {
+.btn-info {
   margin-left: 20px;
   background-color: white !important;
   border: 0;
@@ -33,5 +33,13 @@
   border: 0;
   border-radius: 5px;
   padding: 10px 50px;
+  color: white;
+}
+
+.btn-succes {
+  background-color: rgba(3, 62, 137, 0.7) !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
   color: white;
 }
