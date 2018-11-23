@@ -19,6 +19,7 @@ class SpacesController < ApplicationController
     @owner = @space.owner
     @user  = current_user
     @booking = Booking.new(mate: current_user, space: @space)
+    @review = Review.new
   end
 
   def new
