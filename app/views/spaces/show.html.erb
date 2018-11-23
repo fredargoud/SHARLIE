@@ -61,10 +61,11 @@
       <%= render 'reviews/form', space: @space, review: @review %>
     <% else %>
       <% @space.reviews.each do |review| %>
-        <%= render 'reviews/form', space: @space, review: @review %>
+        <%= render 'reviews/show', review: review %>
       <% end %>
     <% end %>
   </div>
+  <%= render 'reviews/form', space: @space, review: @review %>
 </div>
 
 

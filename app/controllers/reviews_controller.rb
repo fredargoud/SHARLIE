@@ -5,9 +5,15 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.space = @space
     if @review.save
-      redirect_to space_path(@space)
+      respond_to do |format|
+        format.html { redirect_to space_path(@space) }
+        format.js
+      end
     else
-      render 'spaces/show'
+      respond_to do |format|
+        format.html { render 'space/show' }
+        format.js
+      end
     end
   end
 
